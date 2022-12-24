@@ -7,7 +7,7 @@
 .header{
     width: 105px;
     background-color: #1F1D2B;
-    height: 95vh;
+    height: 100vh;
     margin-top: 8px;
     border-radius: 8px;
 }
@@ -35,21 +35,24 @@ ul{
     text-align: center;
     width: 56px;
     height: 56px;
-    color: #EA7C69;
-    background-color: #EA7C69;
     border-radius: 8px;
     color: #fff;
     padding: 18px;
     display: block;
+}
+.header__list li .active{
+    
+    background-color: #EA7C69;
+    
 }
 .active2{
     background-color: #252836;
 }
 .active2::before{
     content: url(../../../image/qirra.svg);
-    right: 1px;
+    right: -1.1px;
     position: absolute;
-    top: -17.5px;
+    top: -15.5px;
     transform: rotate(90deg);
 }
 .active2::after{
