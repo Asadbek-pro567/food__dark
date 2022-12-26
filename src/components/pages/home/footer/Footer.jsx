@@ -12,7 +12,6 @@ function Footer() {
   const {som, setSon} = useContext(Context)
   const {suv, setSuv} = useContext(Context)
   const {zakaz, setZakaz} = useContext(Context)
-  console.log(count)
   const arr = ['Dine In', 'To Go','Delivery']
 
 
@@ -88,10 +87,9 @@ function Footer() {
         </div>
         <div className='sub subb'>
           <button onClick={()=>(
-            setCount(count + 1),
             order?.map((e,i)=>(
               removeElementt(i),
-              setZakaz(count),
+              setCount(count + 1),
               setSon(0),
               e.number = 0
             ))

@@ -6,7 +6,6 @@ import './Payment.css'
 function Paymen() {
     const [id, setId] = useState(0)
     let num = JSON.parse(window.localStorage.getItem('ARR1'))
-    console.log(num);
   return (
     <div className='payment'>
         <div className='payment__inner'>
@@ -63,7 +62,7 @@ function Paymen() {
                 </div>
                 <div className='name__inner name__parol'>
                     <label htmlFor="name3">Table no.</label>
-                    <input type="password" id='name3' placeholder={num}/>
+                    <input type="number" id='name3' placeholder={num}/>
                 </div>
         </div>
         

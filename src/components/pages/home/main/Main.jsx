@@ -21,9 +21,7 @@ function Main() {
     arrCategory.push(e.type)
   })
   
-  const [id, setId] = useState(0)
   const [category, setCategory] = useState(arrCategory[0])
-  const cat = useRef()
   const [inputValue, setInputValue] = useState("");
   const count = useRef(0);
   
