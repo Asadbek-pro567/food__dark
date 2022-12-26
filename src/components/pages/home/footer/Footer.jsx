@@ -1,4 +1,5 @@
 import React, { useContext, useState } from 'react'
+import { Link } from 'react-router-dom'
 import { Context } from '../../../context/Context'
 import './Footer.css'
 
@@ -10,9 +11,9 @@ function Footer() {
   const {order, setOrder} = useContext(Context)
   const {som, setSon} = useContext(Context)
   const {suv, setSuv} = useContext(Context)
-  console.log(suv)
+  const {zakaz, setZakaz} = useContext(Context)
+  console.log(count)
   const arr = ['Dine In', 'To Go','Delivery']
-  const arr1 = ['Dine In', 'To Go', 'Delivery']
 
 
   const removeElement = (inx) => {
@@ -37,8 +38,6 @@ function Footer() {
                 <>
                 <li key={i} className={suv == e? 'activee' :''}>{e}</li>
                 </>
-
-                
               ))
             }
           </ul>
@@ -89,14 +88,14 @@ function Footer() {
         </div>
         <div className='sub subb'>
           <button onClick={()=>(
+            setCount(count + 1),
             order?.map((e,i)=>(
               removeElementt(i),
-              setCount(count + 1),
+              setZakaz(count),
               setSon(0),
-              e.number = 0,
-              e = {}
+              e.number = 0
             ))
-          )} className='continue'>Continue to Payment</button>
+          )} className='continue'><Link to='/payment'>Continue Payment</Link></button>
         </div>
       </div>
     </div>

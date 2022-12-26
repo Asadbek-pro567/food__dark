@@ -8,7 +8,6 @@
     width: 105px;
     background-color: #1F1D2B;
     height: 100vh;
-    margin-top: 8px;
     border-radius: 8px;
 }
 .header__logo{
@@ -42,6 +41,7 @@ ul{
 }
 .header__list li .active{
     
+    box-shadow: 0 0 10px 0 #EA7C69;
     background-color: #EA7C69;
     
 }

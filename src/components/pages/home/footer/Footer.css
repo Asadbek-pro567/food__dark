@@ -4,7 +4,6 @@
 .footer{
     background-color: #1F1D2B;
     height: 100vh;
-    margin-top: 8px;
     color: #fff;
     padding-left: 30px;
     padding-top: 30px;
@@ -127,6 +126,7 @@ span{
     margin-right: 30px;
     border-radius: 10px;
     border: none;
+    box-shadow: 0 0 10px 0 #EA7C69;
 }
 .subb {
     margin-top: 10px;
@@ -138,4 +138,12 @@ span{
     background-color: #EA7C69;
     color: #fff;
     border: none;
+}
+
+a{
+    text-decoration: none;
+    color: #fff;
+}
+a:hover{
+    color: #fff;
 }
