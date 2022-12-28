@@ -71,10 +71,10 @@ function Paymen() {
         </div>
         
         <div className='flex payment__footer'>
-            <Link to='/'>
+            <Link to='/home'>
                 <button className='cancel'>Cancel</button>
             </Link>
-            <Link to='/'>
+            <Link to='/home'>
                 <button className='confirm'>Confirm Payment</button>
             </Link>
         </div>
