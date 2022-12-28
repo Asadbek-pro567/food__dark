@@ -1,12 +1,16 @@
 import React, { useContext, useState } from 'react'
 import { Link } from 'react-router-dom';
-import { Context } from '../../../context/Context';
+import Home from '../header/Home';
+import Main from '../main/Main';
 import './Payment.css'
 
 function Paymen() {
     const [id, setId] = useState(0)
     let num = JSON.parse(window.localStorage.getItem('ARR1'))
   return (
+    <>
+    <Home/>
+    <Main/>
     <div className='payment'>
         <div className='payment__inner'>
             <h2>Payment</h2>
@@ -75,6 +79,7 @@ function Paymen() {
             </Link>
         </div>
     </div>
+    </>
   )
 }
 

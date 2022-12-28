@@ -6,6 +6,8 @@
     background-color: #1F1D2B;
     color: #fff;
     padding: 100px 30px;
+    overflow-y: scroll;
+    height: 100vh;
 }
 .payment__inner{
     border-bottom: 1px solid #393C49;
@@ -42,6 +44,7 @@
     color: #fff;
     background-color: #252836;
     border: 1px solid #fff;
+    position: relative;
 }
 .payment__list .payment__active::before{
     content: url(../../../image/check.svg);

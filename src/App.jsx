@@ -1,19 +1,26 @@
 
-import { Route, Routes } from 'react-router-dom';
+import { useEffect } from 'react';
+import { Route, Routes, useLocation, useNavigate } from 'react-router-dom';
 import './App.css';
 import Footer from './components/pages/home/footer/Footer';
-import Home from './components/pages/home/header/Home';
-import Main from './components/pages/home/main/Main';
 import Paymen from './components/pages/home/payment/Paymen';
+import Login from './components/pages/login/Login';
 
 function App() {
+  const location = useLocation()
+  const navigate = useNavigate()
+  useEffect(()=>{
+    if(window.localStorage.getItem('key') !== '123456'){
+      navigate('/')
+    }
+  },[location.pathname])
+
   return (
     <div className="container">
       <div className="App">
-        <Home/>
-        <Main/>
         <Routes>
-          <Route path='/' element={<Footer/>}></Route>
+          <Route path='/' element={<Login/>}/>
+          <Route path='/home' element={<Footer/>}></Route>
         </Routes>
         <Routes>
           <Route path='/payment' element={<Paymen/>}></Route>

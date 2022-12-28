@@ -1,10 +1,16 @@
 import React, { useState } from 'react'
 import './Home.css'
 import Logo from '../../../image/Logo.png'
-import { Link } from 'react-router-dom'
+import { Link, useLocation } from 'react-router-dom'
 
 function Home() {
+  const local = useLocation()
   const [id, setId] = useState(1)
+  const del = (e)=>{
+    window.localStorage.removeItem('key')
+    console.log(local.pathname);
+  }
+
   return (
     <>
     <div className='container conta'>
@@ -20,7 +26,9 @@ function Home() {
             <li onClick={(e)=>setId(e.target.id)} className={id == '4'? 'header__item active2': 'header__item'} id='4'><Link id='4' className={id == '4'? 'active': ''}><i id='4' className="bi bi-bell"></i></Link></li>
             <li onClick={(e)=>setId(e.target.id)} className={id == '5'? 'header__item active2': 'header__item'} id='5'><Link id='5' className={id == '5'? 'active': ''}><i id='5' className="bi bi-gear-wide"></i></Link></li>
           </ul>
-          <button className='header__btn'><i class="bi bi-box-arrow-right"></i></button>
+          <Link to='/'>
+            <button onClick={del} className='header__btn'><i class="bi bi-box-arrow-right"></i></button>
+          </Link>
         </div>
     </div>
     </>

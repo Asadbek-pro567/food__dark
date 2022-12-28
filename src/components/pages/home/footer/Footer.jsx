@@ -1,6 +1,8 @@
 import React, { useContext, useState } from 'react'
 import { Link } from 'react-router-dom'
 import { Context } from '../../../context/Context'
+import Home from '../header/Home'
+import Main from '../main/Main'
 import './Footer.css'
 
 function Footer() {
@@ -10,8 +12,7 @@ function Footer() {
 
   const {order, setOrder} = useContext(Context)
   const {som, setSon} = useContext(Context)
-  const {suv, setSuv} = useContext(Context)
-  const {zakaz, setZakaz} = useContext(Context)
+  const {suv} = useContext(Context)
   const arr = ['Dine In', 'To Go','Delivery']
 
 
@@ -27,6 +28,9 @@ function Footer() {
 
 
   return (
+    <>
+    <Home/>
+    <Main/>
     <div className='containeer'>
       <div className="footer">
         <div>
@@ -34,9 +38,7 @@ function Footer() {
           <ul className='footer__list'>
             {
               arr?.map((e,i)=>(
-                <>
-                <li key={i} className={suv == e? 'activee' :''}>{e}</li>
-                </>
+                <li key={i} className={suv === e? 'activee' :''}>{e}</li>
               ))
             }
           </ul>
@@ -97,6 +99,7 @@ function Footer() {
         </div>
       </div>
     </div>
+    </>
   )
 }
 
